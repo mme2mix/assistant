@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    user-select: none;
+
+}
+body{display: flex;flex-direction: column; justify-content: center;align-items: center;background: #f1f1f1;}
+header{
+    width: 100%;   
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 50px;
+    background:linear-gradient(#9c9c9c,#f1f1f1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & img{
+        width: 70px;
+        object-fit: cover;
+        border-radius: 15px;
+        -webkit-user-drag: none;
+    }
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    & ul{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        & li{
+            & a{
+                padding: 10px 20px;
+                background: #adadad;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: rgb(224, 224, 224);
+                    box-shadow: 0 0 10px 2px rgb(206, 206, 206),
+                    inset 0 10px 10px rgb(51, 51, 51),
+                    inset 0 -4px 5px rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}
+main{
+    width: 97%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#hero{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #424242;
+    background: #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    & p{
+        font-size: 18px;
+        margin: 10px 0 0 10px;
+    }
+    & .hero-screen{
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        background: linear-gradient(135deg,#292929,#808080,#757575);
+        transform: skew(3deg , 15deg) translate(0px , -15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        &:active{
+            transform: skew(0 , 0) translate(-600px , -100px) scale(4);
+        }
+        & span{
+            background: linear-gradient(135deg,#3d3d3d,#3a3a3a,#5c5c5c);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            user-select: none;
+        }
+    }
+}
